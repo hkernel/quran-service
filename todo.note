@@ -1,0 +1,54 @@
+TARGET FEATURES
+	version 1.0
+	- import quran data:	simpleText
+	- export quran data:	json, sql, mongoDB, xml
+	- index
+		- analyze,morppho,stem...etc
+		- statistics
+		- output index
+	- search
+		- search by word text
+		- search by loci
+	version 2.0
+	- edit/save
+
+
+WHATIS:
+	- structure of the index?	LIST of lIST? MAPDB?
+		- that can be consumed by the UI
+
+TODO				################################################
+	MICRO
+	- 
+	GENERAL
+	- ability to sort index by: alphabetical, frequency, other attribute
+	- ability to analyze by : specific region(ch,v,hizb)
+	- ability to export to different formats (text, json, sql, mongoDB)
+	
+	LEVEL-1
+		- enable arabic
+			- tokenization
+				- case of waaw
+	LEVEL-2
+		- export
+		
+		
+NOTES				################################################
+
+
+ISSUE: 
+	how to change the text appearance, for instance the waaw case	
+	what dat struture to store the index and be able to search by word or by location or by both, efficiently?
+		
+		
+TEST
+	>> add new quiz: checks the verse by the names of G.O.D
+	
+shall we offer download options?
+What is the situation of tanzil project? 
+
+
+synonyms in arabic as confusing words
+على و على و تعالى
+
+

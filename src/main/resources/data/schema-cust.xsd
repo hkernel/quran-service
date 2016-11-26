@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="quran">
+    <xs:complexType>
+      <xs:sequence>
+    	<xs:element name="type" type="xs:string" />
+    	<xs:element name="version" type="xs:string" />
+    	<xs:element name="copyright" type="xs:string" />
+    	<xs:element name="license" type="xs:string" />
+      	<xs:element name="suras">
+      		<xs:complexType>
+      			<xs:sequence>
+      				<xs:element name="alias" type="xs:string" />
+      				<xs:element name="sura">
+	      				<xs:complexType>
+	      					<xs:sequence>
+	      						<xs:element name="index" type="xs:integer" />
+	      						<xs:element name="ayas" type="xs:integer" />
+	      						<xs:element name="start" type="xs:integer" />
+	      						<xs:element name="name" type="xs:string" />
+	      						<xs:element name="tname" type="xs:string" />
+	      						<xs:element name="ename" type="xs:string" />
+	      						<xs:element name="type" type="xs:string" />
+	      						<xs:element name="order" type="xs:integer" />
+	      						<xs:element name="rukus" type="xs:integer" />
+							</xs:sequence>
+	      				</xs:complexType>
+      				</xs:element>
+      			</xs:sequence>
+      		</xs:complexType>
+      	</xs:element>
+      	
+      	<xs:element name="juzs">
+      		<xs:complexType>
+      			<xs:sequence>
+      				<xs:element name="alias" type="xs:string" />
+      				<xs:element name="juz">
+	      				<xs:complexType>
+	      					<xs:sequence>
+	      						<xs:element name="index" type="xs:integer" />
+	      						<xs:element name="sura" type="xs:integer" />
+	      						<xs:element name="aya" type="xs:integer" /> 
+							</xs:sequence>
+	      				</xs:complexType>
+      				</xs:element>
+      			</xs:sequence>
+      		</xs:complexType>
+      	</xs:element>
+      	
+      	<xs:element name="hizbs">
+      		<xs:complexType>
+      			<xs:sequence>
+      				<xs:element name="alias" type="xs:string" />
+      				<xs:element name="quarter">
+	      				<xs:complexType>
+	      					<xs:sequence>
+	      						<xs:element name="index" type="xs:integer" />
+	      						<xs:element name="sura" type="xs:integer" />
+	      						<xs:element name="aya" type="xs:integer" /> 
+							</xs:sequence>
+	      				</xs:complexType>
+      				</xs:element>
+      			</xs:sequence>
+      		</xs:complexType>
+      	</xs:element>
+      	<xs:element name="manzils">
+      		<xs:complexType>
+      			<xs:sequence>
+      				<xs:element name="alias" type="xs:string" />
+      				<xs:element name="manzil">
+	      				<xs:complexType>
+	      					<xs:sequence>
+	      						<xs:element name="index" type="xs:integer" />
+	      						<xs:element name="sura" type="xs:integer" />
+	      						<xs:element name="aya" type="xs:integer" /> 
+							</xs:sequence>
+	      				</xs:complexType>
+      				</xs:element>
+      			</xs:sequence>
+      		</xs:complexType>
+      	</xs:element>
+      	<xs:element name="rukus">
+      		<xs:complexType>
+      			<xs:sequence>
+      				<xs:element name="alias" type="xs:string" />
+      				<xs:element name="ruku">
+	      				<xs:complexType>
+	      					<xs:sequence>
+	      						<xs:element name="index" type="xs:integer" />
+	      						<xs:element name="sura" type="xs:integer" />
+	      						<xs:element name="aya" type="xs:integer" /> 
+							</xs:sequence>
+	      				</xs:complexType>
+      				</xs:element>
+      			</xs:sequence>
+      		</xs:complexType>
+      	</xs:element>
+      	<xs:element name="pages">
+      		<xs:complexType>
+      			<xs:sequence>
+      				<xs:element name="alias" type="xs:string" minOccurs="0" />
+      				<xs:element name="page">
+	      				<xs:complexType>
+	      					<xs:sequence>
+	      						<xs:element name="index" type="xs:integer" />
+	      						<xs:element name="sura" type="xs:integer" />
+	      						<xs:element name="aya" type="xs:integer" /> 
+							</xs:sequence>
+	      				</xs:complexType>
+      				</xs:element>
+      			</xs:sequence>
+      		</xs:complexType>
+      	</xs:element>
+      	<xs:element name="sajdas">
+      		<xs:complexType>
+      			<xs:sequence> 
+      				<xs:element name="page">
+	      				<xs:complexType>
+	      					<xs:sequence>
+	      						<xs:element name="index" type="xs:integer" />
+	      						<xs:element name="sura" type="xs:integer" />
+	      						<xs:element name="aya" type="xs:integer" /> 
+	      						<xs:element name="type">
+	      							<xs:simpleType>
+		      							<xs:restriction base="xs:string">
+		      								<xs:enumeration value="recommended"></xs:enumeration>
+		      								<xs:enumeration value="obligatory"></xs:enumeration>
+		      							</xs:restriction>
+	      							</xs:simpleType>
+	      						</xs:element> 
+							</xs:sequence>
+	      				</xs:complexType>
+      				</xs:element>
+      			</xs:sequence>
+      		</xs:complexType>
+      	</xs:element>
+  	  </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
